@@ -1,0 +1,57 @@
+/* src/components/modals/PaymentFailedModal.css */
+.payment-failed-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 0, 0, 0.15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.payment-failed-box {
+  background: linear-gradient(145deg, #fff5f5, #ffffff);
+  border-top: 6px solid #ef4444;
+  border-radius: 16px;
+  padding: 2rem;
+  width: 420px;
+  box-shadow: 0 8px 20px rgba(239, 68, 68, 0.25);
+  text-align: center;
+  animation: failed-shake 0.3s ease;
+}
+
+.payment-failed-box h2 {
+  color: #dc2626;
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+}
+
+.payment-failed-box p {
+  color: #991b1b;
+  margin-bottom: 1.5rem;
+}
+
+.payment-failed-btn {
+  background: #dc2626;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.payment-failed-btn:hover {
+  background: #b91c1c;
+  transform: scale(1.05);
+}
+
+@keyframes failed-shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-3px); }
+}

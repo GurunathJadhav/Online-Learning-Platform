@@ -1,0 +1,138 @@
+.student-list-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #f9fafc;
+}
+
+/* Fixed Header */
+.student-list-nav-bar-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+/* Main Wrapper */
+.student-list-main {
+  display: flex;
+  flex: 1;
+  padding-top: 70px;
+}
+
+/* Sidebar */
+.student-list-nav-side-bar {
+  width: 220px;
+  position: fixed;
+  top: 70px;
+  left: 0;
+  height: calc(100% - 70px);
+  background-color: #fff;
+  border-right: 1px solid #e0e0e0;
+  z-index: 10;
+}
+
+/* Content Area */
+.student-list-content-wrapper {
+  margin-left: 220px;
+  flex: 1;
+  overflow-y: auto;
+  padding: 30px;
+  height: calc(100vh - 70px);
+}
+
+.student-list-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Search Bar */
+.student-list-search {
+  width: 98%;
+  padding: 10px 14px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.student-list-search:focus {
+  border-color: #4a90e2;
+}
+
+/* Grid */
+.student-list-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Card */
+.student-list-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+  width: 98%;
+}
+
+.student-list-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.student-list-card-name {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #1a1a1a;
+}
+
+.student-list-card-email,
+.student-list-card-id {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+/* Action Buttons */
+.student-list-card-actions {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+}
+
+.student-list-card-btn {
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.student-list-card-btn.update {
+  background-color: #4a90e2;
+  color: #fff;
+}
+
+.student-list-card-btn.update:hover {
+  background-color: #357abd;
+}
+
+.student-list-card-btn.delete {
+  background-color: #e74c3c;
+  color: #fff;
+}
+
+.student-list-card-btn.delete:hover {
+  background-color: #c0392b;
+}

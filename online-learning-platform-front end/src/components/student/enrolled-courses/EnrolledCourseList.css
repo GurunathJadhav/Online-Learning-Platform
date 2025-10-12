@@ -1,0 +1,84 @@
+.enrolled-courses-page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #f5f6fa;
+}
+
+.enrolled-courses-container {
+  display: flex;
+  flex: 1;
+}
+
+.enrolled-courses-content {
+  flex: 1;
+  padding: 30px;
+  background-color: #f9fafc;
+  overflow-y: auto;
+}
+
+.enrolled-courses-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 20px;
+}
+
+.enrolled-courses-search {
+  width: 98%;
+  padding: 10px 15px;
+  border: 1px solid #d0d0d0;
+  border-radius: 6px;
+  margin-bottom: 25px;
+  font-size: 15px;
+  outline: none;
+}
+
+.enrolled-courses-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.enrolled-courses-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.enrolled-courses-info {
+  flex: 1;
+}
+
+.enrolled-courses-name {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.enrolled-courses-description {
+  color: #666;
+  font-size: 14px;
+  margin: 0;
+}
+
+.enrolled-courses-button {
+  background-color: #007bff;
+  border: none;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.enrolled-courses-button:hover {
+  background-color: #0056b3;
+}

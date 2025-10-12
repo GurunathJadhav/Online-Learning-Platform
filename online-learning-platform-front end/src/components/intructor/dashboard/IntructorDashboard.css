@@ -1,0 +1,207 @@
+.instructor-dashboard-container {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  grid-template-rows: 60px auto;
+  grid-template-areas:
+    "header header"
+    "sidebar main";
+  height: 100vh;
+  background-color: #f9fafc;
+  font-family: "Poppins", sans-serif;
+}
+
+.instructor-dashboard-container > .nav-header {
+  grid-area: header;
+}
+.instructor-dashboard-container > .nav-sidebar {
+  grid-area: sidebar;
+}
+
+.instructor-dashboard-main {
+  grid-area: main;
+  padding: 2.5rem 2rem 2rem 2rem;
+  overflow-y: auto;
+}
+
+.instructor-dashboard-main h2 {
+  font-size: 1.6rem;
+  color: #333;
+  margin-bottom: 1.7rem;
+  font-weight: 600;
+}
+
+/* Stats Cards */
+.instructor-dashboard-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 2.2rem;
+}
+
+.instructor-dashboard-card {
+  flex: 1;
+  min-width: 210px;
+  background-color: #fff;
+  padding: 1.2rem 1rem 1.3rem 1rem;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.09);
+  text-align: center;
+  font-weight: 500;
+  color: #444;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+}
+.instructor-dashboard-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+}
+
+.stat-icon {
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+  font-size: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 82, 204, 0.09);
+}
+.stat-blue {
+  background: linear-gradient(135deg, #0052cc 70%, #007bff 100%);
+}
+.stat-yellow {
+  background: linear-gradient(135deg, #ffc107 60%, #ff9800 100%);
+}
+.stat-green {
+  background: linear-gradient(135deg, #28a745 70%, #63e6be 100%);
+}
+.stat-orange {
+  background: linear-gradient(135deg, #ff7e5f 70%, #feb47b 100%);
+}
+
+.stat-value {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 4px;
+  color: #0052cc;
+}
+
+/* Boxes Section */
+.instructor-dashboard-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.instructor-dashboard-box {
+  background-color: #fff;
+  padding: 1.4rem 1.6rem 1.2rem 1.6rem;
+  border-radius: 14px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.09);
+  transition: transform 0.3s;
+  min-height: 170px;
+}
+
+.instructor-dashboard-box:hover {
+  transform: translateY(-3px) scale(1.01);
+}
+
+.instructor-dashboard-box h3 {
+  margin-bottom: 1rem;
+  color: #0052cc;
+  font-size: 1.14rem;
+  font-weight: 600;
+}
+
+.instructor-dashboard-box ul {
+  padding-left: 1.2rem;
+  color: #444;
+}
+
+/* Table Section */
+.instructor-dashboard-table-section {
+  margin-top: 1rem;
+}
+.instructor-dashboard-table-wrapper {
+  background: #fff;
+  border-radius: 13px;
+  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.09);
+  overflow-x: auto;
+}
+.instructor-dashboard-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1rem;
+}
+.instructor-dashboard-table th,
+.instructor-dashboard-table td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+}
+.instructor-dashboard-table th {
+  background: #f1f6ff;
+  color: #0052cc;
+  font-weight: 600;
+}
+.instructor-dashboard-table tbody tr {
+  border-top: 1px solid #ecf0f3;
+  transition: background 0.2s;
+}
+.instructor-dashboard-table tbody tr:hover {
+  background: #f7faff;
+}
+
+/* Progress Bars */
+.instructor-dashboard-progress-mini {
+  background: #e0e0e0;
+  border-radius: 7px;
+  height: 12px;
+  width: 80px;
+  margin-bottom: 3px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 6px;
+}
+.instructor-dashboard-progress-bar-mini {
+  background: linear-gradient(90deg, #0052cc 70%, #007bff 100%);
+  height: 100%;
+  border-radius: 7px;
+  transition: width 0.5s;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .instructor-dashboard-content {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .instructor-dashboard-stats {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .instructor-dashboard-container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "main";
+  }
+
+  .instructor-dashboard-container > .nav-sidebar {
+    display: none;
+  }
+
+  .instructor-dashboard-main {
+    padding: 1.2rem 0.5rem;
+  }
+  .instructor-dashboard-table-wrapper {
+    border-radius: 0;
+    box-shadow: none;
+  }
+}

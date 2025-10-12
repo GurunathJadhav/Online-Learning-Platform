@@ -1,0 +1,61 @@
+/* src/components/modals/PaymentCancelModal.css */
+.payment-cancel-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 200, 0, 0.15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.payment-cancel-box {
+  background: linear-gradient(145deg, #fffbea, #ffffff);
+  border-top: 6px solid #f59e0b;
+  border-radius: 16px;
+  padding: 2rem;
+  width: 420px;
+  box-shadow: 0 8px 20px rgba(245, 158, 11, 0.25);
+  text-align: center;
+  animation: cancel-slide 0.3s ease;
+}
+
+.payment-cancel-box h2 {
+  color: #b45309;
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+}
+
+.payment-cancel-box p {
+  color: #92400e;
+  margin-bottom: 1.5rem;
+}
+
+.payment-cancel-btn {
+  background: #f59e0b;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.payment-cancel-btn:hover {
+  background: #d97706;
+  transform: scale(1.05);
+}
+
+@keyframes cancel-slide {
+  from {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,174 @@
+.admin-course-list-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #f5f7fa;
+}
+
+/* Fixed Header */
+.admin-course-list-nav-bar-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+/* Main Wrapper */
+.admin-course-list-main {
+  display: flex;
+  flex: 1;
+  padding-top: 70px;
+}
+
+/* Sidebar */
+.admin-course-list-nav-side-bar {
+  width: 220px;
+  position: fixed;
+  top: 70px;
+  left: 0;
+  height: calc(100% - 70px);
+  background-color: #fff;
+  border-right: 1px solid #e0e0e0;
+  z-index: 10;
+}
+
+/* Content Area */
+.admin-course-list-content-wrapper {
+  margin-left: 220px;
+  flex: 1;
+  overflow-y: auto;
+  padding: 30px;
+  height: calc(100vh - 70px);
+}
+
+.admin-course-list-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Search Box */
+.admin-course-list-search {
+  width: 98%;
+  padding: 10px 14px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.admin-course-list-search:focus {
+  border-color: #4a90e2;
+}
+
+/* Course Grid */
+.admin-course-list-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.admin-course-list-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+  width: 98%;
+}
+
+.admin-course-list-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.admin-course-list-card-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #1a1a1a;
+}
+
+.admin-course-list-card-desc,
+.admin-course-list-card-instructor {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+/* Action Buttons */
+.admin-course-list-card-actions {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+}
+
+.admin-course-list-card-btn {
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.admin-course-list-card-btn.view {
+  background-color: #4a90e2;
+  color: #fff;
+}
+
+.admin-course-list-card-btn.view:hover {
+  background-color: #357abd;
+}
+
+.admin-course-list-card-btn.edit {
+  background-color: #ffb300;
+  color: #fff;
+}
+
+.admin-course-list-card-btn.edit:hover {
+  background-color: #e6a000;
+}
+
+.admin-course-list-card-btn.delete {
+  background-color: #e74c3c;
+  color: #fff;
+}
+
+.admin-course-list-card-btn.delete:hover {
+  background-color: #c0392b;
+}
+
+/* Pagination */
+.admin-course-list-pagination {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.admin-pagination-btn {
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.admin-pagination-btn:hover {
+  background-color: #4a90e2;
+  color: #fff;
+  border-color: #4a90e2;
+}
+
+.admin-pagination-btn.active {
+  background-color: #4a90e2;
+  color: #fff;
+  border-color: #4a90e2;
+}

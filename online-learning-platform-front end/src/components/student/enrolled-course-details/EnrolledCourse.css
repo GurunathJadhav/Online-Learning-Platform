@@ -1,0 +1,125 @@
+/* ==============================
+   LAYOUT STRUCTURE
+================================*/
+.enrolled-course-page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden; /* prevent whole page scroll */
+}
+
+.enrolled-course-body {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+  background-color: #f5f6fa;
+}
+
+/* ==============================
+   MAIN CONTENT (SCROLLABLE)
+================================*/
+.enrolled-course-main-content {
+  flex: 1;
+  padding: 30px;
+  background-color: #f9fafc;
+  overflow-y: auto; /* ✅ scrollable area */
+  height: calc(100vh - 70px); /* subtract header height */
+  box-sizing: border-box;
+}
+
+.enrolled-course-main-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.enrolled-course-main-content::-webkit-scrollbar-thumb {
+  background-color: #c1c1c1;
+  border-radius: 5px;
+}
+
+/* ==============================
+   COURSE CONTENT STYLING
+================================*/
+.enrolled-course-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.enrolled-course-description {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 25px;
+  line-height: 1.6;
+  max-width: 800px;
+}
+
+.enrolled-course-module-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ==============================
+   MODULE CARD
+================================*/
+.enrolled-course-module-card {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.enrolled-course-module-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.enrolled-course-module-info {
+  flex: 1;
+}
+
+.enrolled-course-module-name {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.enrolled-course-view-btn {
+  background-color: #007bff;
+  border: none;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.25s ease, transform 0.2s ease;
+}
+
+.enrolled-course-view-btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* ==============================
+   OTHER TEXTS
+================================*/
+.enrolled-course-empty {
+  font-size: 15px;
+  color: #777;
+  margin-top: 20px;
+}
+
+.enrolled-course-loading {
+  font-size: 16px;
+  color: #555;
+  text-align: center;
+  margin-top: 50px;
+}
